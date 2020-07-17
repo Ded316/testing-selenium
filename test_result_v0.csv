@@ -1,0 +1,190 @@
+,Tipo,ID,Objetivo,First Number,Second Number,Integers only,Result,Comportamiento esperado,Comportamiento recibido,Test manual,Test automatico
+0,Testing Rápido,1,Pobar límite inferior First Number,-1000000000,1,Off,,"No se puede colocar el número en el campo del operando, como sucede en Prototipo","No se puede colocar el número en el campo del operando, como sucede en Prototipo",OK,OK
+1,Testing Rápido,2,Probar límite superior First Number,10000000000,1,Off,,"No se puede colocar el número en el campo del operando, como sucede en Prototipo","No se puede colocar el número en el campo del operando, como sucede en Prototipo",OK,OK
+2,Testing Rápido,3,Probar límite inferior Second Number,1,-1000000000,Off,,"No se puede colocar el número en el campo del operando, como sucede en Prototipo","No se puede colocar el número en el campo del operando, como sucede en Prototipo",OK,OK
+3,Testing Rápido,4,Probar límite superior Second Number,1,10000000000,Off,,"No se puede colocar el número en el campo del operando, como sucede en Prototipo","No se puede colocar el número en el campo del operando, como sucede en Prototipo",OK,OK
+4,Testing Rápido,5,Pobar límite inferior First Number en concatenación,aaaaaaaaaaa,a,,,"No se puede colocar el número en el campo del operando, como sucede en Prototipo","No se puede colocar el número en el campo del operando, como sucede en Prototipo",OK,OK
+5,Testing Rápido,6,Pobar límite inferior First Number en concatenación,a,aaaaaaaaaaa,,,"No se puede colocar el número en el campo del operando, como sucede en Prototipo","No se puede colocar el número en el campo del operando, como sucede en Prototipo",OK,OK
+6,Testing Rápido,7,Probar w = . en operaciones aritméticas en first number,.,1,Off,,Number 1 is not a number,Opera,ERROR,OK
+7,Testing Rápido,8,Probar w = - en operaciones aritméticas en first number,-,1,Off,,Number 1 is not a number,Opera,ERROR,OK
+8,Testing Rápido,9,Probar w = N⁺-N* en operaciones aritméticas en first number,1-33,1,Off,,Number 1 is not a number,Opera,ERROR,OK
+9,Testing Rápido,10,Probar w = . en operaciones aritméticas en second number,1,.,Off,,Number 2 is not a number,Number 2 is not a number,OK,OK
+10,Testing Rápido,11,Probar w = - en operaciones aritméticas en second number,1,-,Off,,Number 2 is not a number,Number 2 is not a number,OK,OK
+11,Testing Rápido,12,Probar w = N⁺-N* en operaciones aritméticas en second number,1,1-33,Off,,Number 2 is not a number,Number 2 is not a number,OK,OK
+12,Testing Rápido,13,Probar first number con caracteres incorrectos,"1,2",1,Off,,Number 1 is not a number,Opera,ERROR,OK
+13,Testing Rápido,14,Probar second number con caracteres incorrectos,1,"1,2",Off,,Number 2 is not a number,Number 2 is not a number,OK,OK
+14,Testing Rápido,15,Probar suma correcta,1.2,1.2,Off,,2.4,Result 1.2,ERROR,OK
+15,Testing Rápido,16,Probar resta correcta,1.2,1.2,Off,,0,Result -1.2,ERROR,OK
+16,Testing Rápido,17,Probar multiplicación correcta,1.2,1.2,Off,,1.44,Result 0,ERROR,OK
+17,Testing Rápido,18,Probar división correcta,1.2,1.2,Off,,1,Result 0,ERROR,OK
+18,Testing Rápido,19,Probar división por cero,1.2,0,Off,,Divide by 0 error,Divide by 0 error,OK,OK
+19,Testing Rápido,20,Probar opción Integer only,1.2,1.6,On,,2,1,ERROR,OK
+20,Testing Rápido,21,Probar concatenación correcta,abc,dfg,,,abcdfg,dfg,ERROR,OK
+21,Suma,22,Correcto enteros,5,4,Off,,9,4,ERROR,OK
+22,Suma,23,Correcto reales,5.1,4.2,Off,,9.3,4.2,ERROR,OK
+23,Suma,24,Correcto int on,5.1,4.2,On,,9,4,ERROR,OK
+24,Suma,25,N1 caracter,a,4.2,Off,,N1 no num,4.2,ERROR,OK
+25,Suma,26,N2 caracter,5.1,a,Off,,N2 no num,N2 no num,OK,OK
+26,Suma,27,N1 y N2 caracter,a,b,Off,,N1 y N2 no num,N2 no num,ERROR,OK
+27,Suma,28,N1 vacío, ,4.2,Off,,4.2,4.2,OK,OK
+28,Suma,29,N2 vacío,5.1, ,Off,,5.1,0,ERROR,OK
+29,Suma,30,N1 y N2 vacío, , ,Off,,0,0,OK,OK
+30,Suma,31,-N1 -N2,-5.1,-4.2,Off,,-9.3,-4.2,ERROR,OK
+31,Suma,32,-N1 +N2,-5.1,4.2,Off,,-0.8999999999999995,4.2,ERROR,OK
+32,Suma,33,N1 -N2,5.1,-4.2,Off,,0.8999999999999995,-4.2,ERROR,OK
+33,Suma,34,N1>10 caracteres,11111111111,4.2,Off,,No permite,No permite,OK,OK
+34,Suma,35,N2>10 caracteres,5.1,11111111111,Off,,No permite,No permite,OK,OK
+35,Suma,36,N1 y N2 > 10 caracteres,11111111111,11111111111,Off,,No permite,No permite,OK,OK
+36,Suma,37,N1 con coma,"5,1",4.2,Off,,N1 no num,4.2,ERROR,OK
+37,Suma,38,N1 con espacio,5 1,4.2,Off,,N1 no num,4.2,ERROR,OK
+38,Suma,39,N2 con coma,5.1,"4,2",Off,,N2 no num,N2 no num,OK,OK
+39,Suma,40,N2 con espacio,5.1,4 2,Off,,N2 no num,N2 no num,OK,OK
+40,Suma,41,N1 y N2 con coma,"5,1","4,2",Off,,N1 y N2 no num,N2 no num,ERROR,OK
+41,Suma,42,N1 y N2 con espacio,5 1,4 2,Off,,N1 y N2 no num,N2 no num,ERROR,OK
+42,Suma,43,N1 con e,5e4,4.2,Off,,50004.2,4.2,ERROR,OK
+43,Suma,44,N2 con e,5.1,4e2,Off,,405.1,4e2,ERROR,OK
+44,Suma,45,N1 con E,5E4,4.2,Off,,50004.2,4.2,ERROR,OK
+45,Suma,46,N2 con E,5.1,4E2,Off,,405.1,4E2,ERROR,OK
+46,Suma,47,N1 y N2 con e,5e4,4e2,Off,,50400,4e2,ERROR,OK
+47,Suma,48,N1 y N2 con E,5E4,4E2,Off,,50400,4E2,ERROR,OK
+48,Suma,49,N1 limite inf V,-999999999,4.2,Off,,-999999994.8,4.2,ERROR,OK
+49,Suma,50,N2 limite inf V,5.1,-999999999,Off,,-999999993.9,-999999999,ERROR,OK
+50,Suma,51,N1 y N2 limite inf V,-999999999,-999999999,Off,,-1999999998,-999999999,ERROR,OK
+51,Suma,52,N1 lim sup V,9999999999,4.2,Off,,10000000003.2,4.2,ERROR,OK
+52,Suma,53,N2 lim sup V,5.1,9999999999,Off,,10000000004.1,9999999999,ERROR,OK
+53,Suma,54,N1 y N2 lim sup V,9999999999,9999999999,Off,,19999999998,9999999999,ERROR,OK
+54,Suma,55,N1 limite inf I,-9999999999,4.2,Off,,No permite,No permite,OK,OK
+55,Suma,56,N2 limite inf I,5.1,-9999999999,Off,,No permite,No permite,OK,OK
+56,Suma,57,N1 y N2 limite inf I,-9999999999,-9999999999,Off,,No permite,No permite,OK,OK
+57,Suma,58,N1 lim sup I,99999999999,4.2,Off,,No permite,No permite,OK,OK
+58,Suma,59,N2 lim sup I,5.1,99999999999,Off,,No permite,No permite,OK,OK
+59,Suma,60,N1 y N2 lim sup I,99999999999,9999999999,Off,,No permite,No permite,OK,OK
+60,Resta,61,Correcto enteros,5,4,Off,,1,-4,ERROR,OK
+61,Resta,62,Correcto reales,5.1,4.2,Off,,0.8999999999999995,-4.2,ERROR,OK
+62,Resta,63,Correcto int on,5.1,4.2,On,,0,-4,ERROR,OK
+63,Resta,64,N1 caracter,a,4.2,Off,,N1 no num,-4.2,ERROR,OK
+64,Resta,65,N2 caracter,5.1,a,Off,,N2 no num,N2 no num,OK,OK
+65,Resta,66,N1 y N2 caracter,a,b,Off,,N1 y N2 no num,N2 no num,ERROR,OK
+66,Resta,67,N1 vacío, ,4.2,Off,,-4.2,-4.2,OK,OK
+67,Resta,68,N2 vacío,5.1, ,Off,,5.1,0,ERROR,OK
+68,Resta,69,N1 y N2 vacío, , ,Off,,0,0,OK,OK
+69,Resta,70,-N1 -N2,-5.1,-4.2,Off,,-0.8999999999999995,4.2,ERROR,OK
+70,Resta,71,-N1 +N2,-5.2,4.2,Off,,-9.4,-4.2,ERROR,OK
+71,Resta,72,N1 -N2,5.1,-4.2,Off,,9.3,4.2,ERROR,OK
+72,Resta,73,N1>10 caracteres,11111111111,4.2,Off,,No permite,No permite,OK,OK
+73,Resta,74,N2>10 caracteres,5.1,11111111111,Off,,No permite,No permite,OK,OK
+74,Resta,75,N1 y N2 > 10 caracteres,11111111111,11111111111,Off,,No permite,No permite,OK,OK
+75,Resta,76,N1 con coma,"5,1",4.2,Off,,N1 no num,4.2,ERROR,OK
+76,Resta,77,N1 con espacio,5 1,4.2,Off,,N1 no num,4.2,ERROR,OK
+77,Resta,78,N2 con coma,5.1,"4,2",Off,,N2 no num,N2 no num,OK,OK
+78,Resta,79,N2 con espacio,5.1,4 2,Off,,N2 no num,N2 no num,OK,OK
+79,Resta,80,N1 y N2 con coma,"5,1","4,2",Off,,N1 y N2 no num,N2 no num,ERROR,OK
+80,Resta,81,N1 y N2 con espacio,5 1,4 2,Off,,N1 y N2 no num,N2 no num,ERROR,OK
+81,Resta,82,N1 con e,5e4,4.2,Off,,49995.8,-4.2,ERROR,OK
+82,Resta,83,N2 con e,5.1,4e2,Off,,-394.9,-400,ERROR,OK
+83,Resta,84,N1 con E,5E4,4.2,Off,,49995.8,-4.2,ERROR,OK
+84,Resta,85,N2 con E,5.1,4E2,Off,,-394.9,-400,ERROR,OK
+85,Resta,86,N1 y N2 con e,5e4,4e2,Off,,49600,-400,ERROR,OK
+86,Resta,87,N1 y N2 con E,5E4,4E2,Off,,49600,-400,ERROR,OK
+87,Resta,88,N1 limite inf V,-999999999,4.2,Off,,-1000000003.2,-4.2,ERROR,OK
+88,Resta,89,N2 limite inf V,5.1,-999999999,Off,,1000000004.1,999999999,ERROR,OK
+89,Resta,90,N1 y N2 limite inf V,-999999999,-999999999,Off,,0,999999999,ERROR,OK
+90,Resta,91,N1 lim sup V,9999999999,4.2,Off,,9999999994.8,-4.2,ERROR,OK
+91,Resta,92,N2 lim sup V,5.1,9999999999,Off,,-9999999993.9,-9999999999,ERROR,OK
+92,Resta,93,N1 y N2 lim sup V,9999999999,9999999999,Off,,0,-9999999999,ERROR,OK
+93,Resta,94,N1 limite inf I,-9999999999,4.2,Off,,No permite,No permite,OK,OK
+94,Resta,95,N2 limite inf I,5.1,-9999999999,Off,,No permite,No permite,OK,OK
+95,Resta,96,N1 y N2 limite inf I,-9999999999,-9999999999,Off,,No permite,No permite,OK,OK
+96,Resta,97,N1 lim sup I,99999999999,4.2,Off,,No permite,No permite,OK,OK
+97,Resta,98,N2 lim sup I,5.1,99999999999,Off,,No permite,No permite,OK,OK
+98,Resta,99,N1 y N2 lim sup I,99999999999,9999999999,Off,,No permite,No permite,OK,OK
+99,Multiplicación,100,Correcto enteros,5,4,Off,,20,0,ERROR,OK
+100,Multiplicación,101,Correcto reales,5.1,4.2,Off,,21.419999999999998,0,ERROR,OK
+101,Multiplicación,102,Correcto int on,5.1,4.2,On,,21,0,ERROR,OK
+102,Multiplicación,103,N1 caracter,a,4.2,Off,,N1 no num,0,ERROR,OK
+103,Multiplicación,104,N2 caracter,5.1,a,Off,,N2 no num,N2 no num,OK,OK
+104,Multiplicación,105,N1 y N2 caracter,a,b,Off,,N1 y N2 no num,N2 no num,ERROR,OK
+105,Multiplicación,106,N1 vacío, ,4.2,Off,,0,0,OK,OK
+106,Multiplicación,107,N2 vacío,5.1, ,Off,,0,0,OK,OK
+107,Multiplicación,108,N1 y N2 vacío, , ,Off,,0,0,OK,OK
+108,Multiplicación,109,-N1 -N2,-5.1,-4.2,Off,,21.419999999999998,0,ERROR,OK
+109,Multiplicación,110,-N1 +N2,-5.2,4.2,Off,,-21.840000000000003,0,ERROR,OK
+110,Multiplicación,111,N1 -N2,5.1,-4.2,Off,,-21.419999999999998,0,ERROR,OK
+111,Multiplicación,112,N1>10 caracteres,11111111111,4.2,Off,,No permite,No permite,OK,OK
+112,Multiplicación,113,N2>10 caracteres,5.1,11111111111,Off,,No permite,No permite,OK,OK
+113,Multiplicación,114,N1 y N2 > 10 caracteres,11111111111,11111111111,Off,,No permite,No permite,OK,OK
+114,Multiplicación,115,N1 con coma,"5,1",4.2,Off,,N1 no num,0,ERROR,OK
+115,Multiplicación,116,N1 con espacio,5 1,4.2,Off,,N1 no num,0,ERROR,OK
+116,Multiplicación,117,N2 con coma,5.1,"4,2",Off,,N2 no num,N2 no num,OK,OK
+117,Multiplicación,118,N2 con espacio,5.1,4 2,Off,,N2 no num,N2 no num,OK,OK
+118,Multiplicación,119,N1 y N2 con coma,"5,1","4,2",Off,,N1 y N2 no num,N2 no num,ERROR,OK
+119,Multiplicación,120,N1 y N2 con espacio,5 1,4 2,Off,,N1 y N2 no num,N2 no num,ERROR,OK
+120,Multiplicación,121,N1 con e,5e4,4.2,Off,,210000,,ERROR,OK
+121,Multiplicación,122,N2 con e,5.1,4e2,Off,,2039.9999999999998,,ERROR,OK
+122,Multiplicación,123,N1 con E,5E4,4.2,Off,,210000,0,ERROR,OK
+123,Multiplicación,124,N2 con E,5.1,4E2,Off,,2039.9999999999998,0,ERROR,OK
+124,Multiplicación,125,N1 y N2 con e,5e4,4e2,Off,,20000000,0,ERROR,OK
+125,Multiplicación,126,N1 y N2 con E,5E4,4E2,Off,,20000000,0,ERROR,OK
+126,Multiplicación,127,N1 limite inf V,-999999999,4.2,Off,,-4199999995.8,0,ERROR,OK
+127,Multiplicación,128,N2 limite inf V,5.1,-999999999,Off,,-5099999994.9,0,ERROR,OK
+128,Multiplicación,129,N1 y N2 limite inf V,-999999999,-999999999,Off,,999999998000000000,0,ERROR,OK
+129,Multiplicación,130,N1 lim sup V,9999999999,4.2,Off,,41999999995.8,0,ERROR,OK
+130,Multiplicación,131,N2 lim sup V,5.1,9999999999,Off,,50999999994.899994,0,ERROR,OK
+131,Multiplicación,132,N1 y N2 lim sup V,9999999999,9999999999,Off,,99999999980000000000,0,ERROR,OK
+132,Multiplicación,133,N1 limite inf I,-9999999999,4.2,Off,,No permite,No permite,OK,OK
+133,Multiplicación,134,N2 limite inf I,5.1,-9999999999,Off,,No permite,No permite,OK,OK
+134,Multiplicación,135,N1 y N2 limite inf I,-9999999999,-9999999999,Off,,No permite,No permite,OK,OK
+135,Multiplicación,136,N1 lim sup I,99999999999,4.2,Off,,No permite,No permite,OK,OK
+136,Multiplicación,137,N2 lim sup I,5.1,99999999999,Off,,No permite,No permite,OK,OK
+137,Multiplicación,138,N1 y N2 lim sup I,99999999999,9999999999,Off,,No permite,No permite,OK,OK
+138,División,139,Correcto enteros,5,4,Off,,1.25,0,ERROR,OK
+139,División,140,Correcto reales,5.1,4.2,Off,,1.2142857142857142,0,ERROR,OK
+140,División,141,Correcto int on,5.1,4.2,On,,1,0,ERROR,OK
+141,División,142,N1 caracter,a,4.2,Off,,N1 no num,0,ERROR,OK
+142,División,143,N2 caracter,5.1,a,Off,,N2 no num,N2 no num,OK,OK
+143,División,144,N1 y N2 caracter,a,b,Off,,N1 y N2 no num,N2 no num,ERROR,OK
+144,División,145,N1 vacío, ,4.2,Off,,0,0,OK,OK
+145,División,146,N2 vacío,5.1, ,Off,,Error divisiòn por cero,Error divisiòn por cero,OK,OK
+146,División,147,N1 y N2 vacío, , ,Off,,Error divisiòn por cero,Error divisiòn por cero,OK,OK
+147,División,148,-N1 -N2,-5.1,-4.2,Off,,1.2142857142857142,0,ERROR,OK
+148,División,149,-N1 +N2,-5.2,4.2,Off,,-1.2380952380952381,0,ERROR,OK
+149,División,150,N1 -N2,5.1,-4.2,Off,,-1.2142857142857142,0,ERROR,OK
+150,División,151,N1>10 caracteres,11111111111,4.2,Off,,No permite,No permite,OK,OK
+151,División,152,N2>10 caracteres,5.1,11111111111,Off,,No permite,No permite,OK,OK
+152,División,153,N1 y N2 > 10 caracteres,11111111111,11111111111,Off,,No permite,No permite,OK,OK
+153,División,154,N1 con coma,"5,1",4.2,Off,,N1 no num,0,ERROR,OK
+154,División,155,N1 con espacio,5 1,4.2,Off,,N1 no num,0,ERROR,OK
+155,División,156,N2 con coma,5.1,"4,2",Off,,N2 no num,N2 no num,OK,OK
+156,División,157,N2 con espacio,5.1,4 2,Off,,N2 no num,N2 no num,OK,OK
+157,División,158,N1 y N2 con coma,"5,1","4,2",Off,,N1 y N2 no num,N2 no num,ERROR,OK
+158,División,159,N1 y N2 con espacio,5 1,4 2,Off,,N1 y N2 no num,N2 no num,ERROR,OK
+159,División,160,N1 con e,5e4,4.2,Off,,11904.761904761905,0,ERROR,OK
+160,División,161,N2 con e,5.1,4e2,Off,,0.01275,0,ERROR,OK
+161,División,162,N1 con E,5E4,4.2,Off,,11904.761904761905,0,ERROR,OK
+162,División,163,N2 con E,5.1,4E2,Off,,0.01275,0,ERROR,OK
+163,División,164,N1 y N2 con e,5e4,4e2,Off,,125,0,ERROR,OK
+164,División,165,N1 y N2 con E,5E4,4E2,Off,,125,0,ERROR,OK
+165,División,166,N1 limite inf V,-999999999,4.2,Off,,-238095237.85714284,0,ERROR,OK
+166,División,167,N2 limite inf V,5.1,-999999999,Off,,-5.1000000051e-9,0,ERROR,OK
+167,División,168,N1 y N2 limite inf V,-999999999,-999999999,Off,,1,0,ERROR,OK
+168,División,169,N1 lim sup V,9999999999,4.2,Off,,2380952380.714286,0,ERROR,OK
+169,División,170,N2 lim sup V,5.1,9999999999,Off,,5.100000000509999e-10,0,ERROR,OK
+170,División,171,N1 y N2 lim sup V,9999999999,9999999999,Off,,1,0,ERROR,OK
+171,División,172,N1 limite inf I,-9999999999,4.2,Off,,No permite,No permite,OK,OK
+172,División,173,N2 limite inf I,5.1,-9999999999,Off,,No permite,No permite,OK,OK
+173,División,174,N1 y N2 limite inf I,-9999999999,-9999999999,Off,,No permite,No permite,OK,OK
+174,División,175,N1 lim sup I,5.1,4.2,Off,,No permite,No permite,OK,OK
+175,División,176,N2 lim sup I,5.1,99999999999,Off,,No permite,No permite,OK,OK
+176,División,177,N1 y N2 lim sup I,99999999999,9999999999,Off,,No permite,No permite,OK,OK
+177,División,178,N2 0,5.1,0,Off,,Error divisiòn por cero,Error divisiòn por cero,OK,OK
+178,Concatenación,179,N1 vacío, ,a,Off,, a,a,ERROR,OK
+179,Concatenación,180,N2 vacío,a, ,Off,,a , ,ERROR,OK
+180,Concatenación,181,N1 y N2 vacío, , ,Off,,  , ,ERROR,OK
+181,Concatenación,182,N1>10 caracteres,aaaaaaaaaaa,a ,Off,,No permite,No permite,OK,OK
+182,Concatenación,183,N2>10 caracteres,a,aaaaaaaaaaa,Off,,No permite,No permite,OK,OK
+183,Concatenación,184,N1 y N2 > 10 caracteres,aaaaaaaaaaa,aaaaaaaaaaa,Off,,No permite,No permite,OK,OK
+184,Answer no vacío,185,Add con Answer != vacío,5.1,4.2,Off,9.3,9.3,13.5,ERROR,OK
+185,Answer no vacío,186,Resta con Answer != vacío,5.1,4.2,Off,0.8999999999999995,0.8999999999999995,-33.000.000.000.000.000,ERROR,OK
+186,Answer no vacío,187,Mul con Answer != vacío,5.1,4.2,Off,21.419999999999998,21.419999999999998,89.964,ERROR,OK
+187,Answer no vacío,188,Div con Answer != vacío,5.1,4.2,Off,1.2142857142857142,1.2142857142857142,2.891.156.462.585.030,ERROR,OK
+188,Answer no vacío,189,Concat con Answer != vacío,abc,def,Off,abcdef,abcdef,abcdefdef,ERROR,OK
